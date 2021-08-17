@@ -1,0 +1,89 @@
+services:
+  php:
+    user: 1000:1000
+    build:
+      dockerfile: .docker/php/Dockerfile
+      target: php-dev-base
+      context: .
+    labels:
+      - "co.elastic.logs/enabled=true"
+      - "traefik.enable=true"
+      - "traefik.http.routers.php.rule=Host(`poc.localhost`)"
+      - "traefik.http.routers.php.entrypoints=web"
+    volumes:
+      - ~/.composer:/var/www/.composer
+      - .:/var/www/html
+
+  traefik:
+    image: "traefik:v2.4"
+    command:
+      #- "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.10.2
+    volumes:
+      - .docker/logstash/pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    depends_on:
+      - elasticsearch
+    profiles:
+      - debug
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.10.2
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - DOMAIN_NAME=default:kibana.poc.loc
+    depends_on:
+      - elasticsearch
+    profiles:
+      - debug
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.kibana.rule=Host(`kibana-poc.localhost`)"
+      - "traefik.http.routers.kibana.entrypoints=web"
+  filebeat:
+    build:
+      dockerfile: Dockerfile
+      context: .docker/filebeat
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - logstash
+    profiles:
+      - debug
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.10.2
+    environment:
+      - discovery.type=single-node
+      - cluster.name=docker-logs-elk-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms256m -Xmx256m"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    profiles:
+      - debug
+  taurus:
+    image: blazemeter/taurus
+    user: 1000:1000
+    volumes:
+        - ./tests/Load/:/bzt-configs
+        - ./var/cache/dev/blazemeter-artifacts:/tmp/artifacts
+    command: /bzt-configs/basic.yaml
+    profiles:
+      - test
+
+volumes:
+  esdata: ~

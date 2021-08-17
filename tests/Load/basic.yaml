@@ -1,0 +1,21 @@
+reporting:
+    -   module: passfail
+        criteria:
+            - avg-rt >200ms
+
+execution:
+    -   executor: gatling
+        scenario: basic
+        concurrency: 10
+        ramp-up: 5s
+        hold-for: 10s
+
+scenarios:
+    basic:
+        default-address: php:8080
+        requests:
+            -   url: /
+                headers:
+                    Accept: application/json
+                method: POST
+                body-file: basic-request.json

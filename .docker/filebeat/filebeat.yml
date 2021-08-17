@@ -1,0 +1,16 @@
+filebeat.autodiscover:
+  providers:
+    - type: docker
+      hints.enabled: true
+      hints.default_config.enabled: false
+
+output.logstash:
+  hosts: ["logstash:5044"]
+
+processors:
+  # decode the log field (sub JSON document) if JSON encoded, then maps it's fields to elasticsearch fields
+  - decode_json_fields:
+      fields: ["log", "message"]
+      target: ""
+      # overwrite existing target elasticsearch fields while decoding json fields
+      overwrite_keys: true
