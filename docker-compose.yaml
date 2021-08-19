@@ -66,7 +66,7 @@ services:
       - discovery.type=single-node
       - cluster.name=docker-logs-elk-cluster
       - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms256m -Xmx256m"
+      - "ES_JAVA_OPTS=-Xms2G -Xmx2G"
     volumes:
       - esdata:/usr/share/elasticsearch/data
     ulimits:
