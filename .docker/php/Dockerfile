@@ -20,7 +20,7 @@ CMD /var/www/html/bin/server
 
 WORKDIR /var/www/html
 
-COPY composer.json ./
+COPY composer.json composer.lock symfony.lock ./
 
 RUN composer install --no-dev --no-progress -anq --no-scripts
 
@@ -29,7 +29,6 @@ FROM php-base AS php-prod
 EXPOSE 80
 
 COPY config ./config
-COPY public ./public
 COPY src ./src
 COPY bin ./bin
 COPY .env ./
@@ -57,6 +56,6 @@ COPY public ./public
 COPY src ./src
 COPY tests ./tests
 COPY bin ./bin
-COPY .env .env.test phpunit.xml.dist psalm.xml .php_cs.dist phpstan.neon phpstan-baseline.neon ./
+COPY .env  ./
 
 RUN echo "APP_ENV=dev" > .env.local && composer install --no-progress -anq && composer dump-env prod
