@@ -6,9 +6,9 @@ reporting:
 execution:
     -   executor: gatling
         scenario: basic
-        concurrency: 10
+        concurrency: 4000
         ramp-up: 5s
-        hold-for: 10s
+        hold-for: 30s
 
 scenarios:
     basic:

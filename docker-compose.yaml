@@ -77,10 +77,9 @@ services:
       - debug
   taurus:
     image: blazemeter/taurus
-    user: 1000:1000
     volumes:
         - ./tests/Load/:/bzt-configs
-        - ./var/cache/dev/blazemeter-artifacts:/tmp/artifacts
+        - ./var/blazemeter-artifacts:/tmp/artifacts
     command: /bzt-configs/basic.yaml
     profiles:
       - test
