@@ -14,6 +14,16 @@ services:
       - ~/.composer:/var/www/.composer
       - .:/var/www/html
 
+  go:
+    build:
+      dockerfile: .docker/go/Dockerfile
+      context: .
+    labels:
+      - "co.elastic.logs/enabled=true"
+      - "traefik.enable=true"
+      - "traefik.http.routers.go.rule=Host(`poc-go.localhost`)"
+      - "traefik.http.routers.go.entrypoints=web"
+
   traefik:
     image: "traefik:v2.4"
     command:
