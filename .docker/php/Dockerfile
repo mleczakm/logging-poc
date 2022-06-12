@@ -4,7 +4,7 @@ FROM php:8-cli-alpine as php-base
 ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_HOME /var/www/.composer
 
-COPY --from=composer:2.1.5 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 RUN apk add --update icu && \
     apk add --no-cache --virtual .build-deps $PHPIZE_DEPS icu-dev curl && \
