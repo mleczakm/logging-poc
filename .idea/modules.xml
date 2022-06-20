@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/logging-poc.iml" filepath="$PROJECT_DIR$/.idea/logging-poc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/payout.iml" filepath="$PROJECT_DIR$/.idea/payout.iml" />
     </modules>
   </component>
 </project>

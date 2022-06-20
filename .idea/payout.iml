@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/swoole/vendor/nyholm/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/swoole/vendor/symfony/flex" />
+      <excludeFolder url="file://$MODULE_DIR$/swoole/vendor/symfony/dotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/swoole/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/swoole/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/swoole/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/swoole/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/swoole/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/swoole/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/swoole/vendor/php-http/message-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/swoole/var" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
