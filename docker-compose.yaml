@@ -30,7 +30,6 @@ services:
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
     profiles:
-      - debug
       - traefik
 
   docker-hostmanager:
@@ -40,7 +39,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /etc/hosts:/hosts
     profiles:
-      - debug
       - hostmanager
 
   logstash:

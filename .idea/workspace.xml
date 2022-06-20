@@ -4,30 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e13ac886-4ec9-4cbe-a39c-44da8586f7c3" name="Default Changelist" comment="Update composer dependency">
-      <change afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/php/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/php/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/logging-poc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/payout.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="e13ac886-4ec9-4cbe-a39c-44da8586f7c3" name="Default Changelist" comment="Base symfony app with swoole runtime">
+      <change afterPath="$PROJECT_DIR$/src/Controller/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/server" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bootstrap.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Action/IndexAction.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Log/Factory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Message/NullTask.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MessageHandler/NullTaskHandler.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/Factory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Task/Handler.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Load/basic-request.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Load/basic.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/blazemeter-artifacts/.gitignore" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +122,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix building process" />
     <MESSAGE value="Update composer dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update composer dependency" />
+    <MESSAGE value="Base symfony app with swoole runtime" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base symfony app with swoole runtime" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
