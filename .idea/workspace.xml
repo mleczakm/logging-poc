@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e13ac886-4ec9-4cbe-a39c-44da8586f7c3" name="Default Changelist" comment="Add department storing">
-      <change afterPath="$PROJECT_DIR$/src/UserInterface/Http/AddUserAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/AddUserTest.php" afterDir="false" />
+    <list default="true" id="e13ac886-4ec9-4cbe-a39c-44da8586f7c3" name="Default Changelist" comment="Add dama bundle config">
+      <change afterPath="$PROJECT_DIR$/src/UserInterface/Http/GetReportAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/GetReportActionTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -291,7 +292,9 @@
     <MESSAGE value="Add tests" />
     <MESSAGE value="Add base symfony internals and database support" />
     <MESSAGE value="Add department storing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add department storing" />
+    <MESSAGE value="Add user storing" />
+    <MESSAGE value="Add dama bundle config" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add dama bundle config" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -303,7 +306,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/UserInterface/Http/AddUserAction.php</url>
-          <line>31</line>
+          <line>32</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>

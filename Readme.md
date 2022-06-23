@@ -7,11 +7,11 @@ You will need working docker and docker-compose/docker compose V2 (https://docs.
 All you need to do is:
 ```shell
 docker compose run php composer install
-docker compose --profile debug up -d
+docker compose --profile traefik up -d
 ```
 ## Application visibility
 
-App is available under address http://poc.localhost/, routed by traefik.
+App is available under address http://symfony.localhost/, routed by traefik.
 Traefik dashboard is available under http://localhost:8080 
 
 
