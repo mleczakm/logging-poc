@@ -22,3 +22,26 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\UserInterface\Http\:
+        resource: '../src/UserInterface/Http/'
+        tags: [ 'controller.service_arguments' ]
+
+    App\Infrastructure\Symfony\Serializer\MoneyNormalizer:
+        tags:
+            - name: serializer.normalizer
+              priority: 100
+
+    App\Infrastructure\Symfony\Serializer\MoneyDenormalizer:
+        tags:
+            - name: serializer.normalizer
+              priority: 100
+
+    dunglas_doctrine_json_odm.serializer:
+        class: Dunglas\DoctrineJsonOdm\Serializer
+        arguments:
+            - [ '@App\Infrastructure\Symfony\Serializer\MoneyDenormalizer', '@dunglas_doctrine_json_odm.normalizer.array', '@serializer.normalizer.datetime', '@dunglas_doctrine_json_odm.normalizer.object' ]
+            - [ '@serializer.encoder.json' ]
+        public: true
+        autoconfigure: false
+        autowire: false

@@ -5,6 +5,8 @@ doctrine:
         # IMPORTANT: You MUST configure your server version,
         # either here or in the DATABASE_URL env var (see .env file)
         #server_version: '13'
+        types:
+            dollar: \App\Infrastructure\ORM\Type\Dollar
     orm:
         auto_generate_proxy_classes: true
         naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
@@ -12,8 +14,9 @@ doctrine:
         mappings:
             App:
                 is_bundle: false
-                dir: '%kernel.project_dir%/src/Infrastructure/ORM/Entity'
-                prefix: 'App\Infrastructure\ORM'
+                type: xml
+                dir: '%kernel.project_dir%/src/Infrastructure/ORM/Entity/Mapping'
+                prefix: 'App\Infrastructure\ORM\Entity'
                 alias: App
 
 when@test:

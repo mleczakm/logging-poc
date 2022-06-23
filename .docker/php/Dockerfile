@@ -44,8 +44,8 @@ FROM php-base AS php-dev-base
 EXPOSE 8080
 
 RUN apk add --no-cache --virtual .build-deps $PHPIZE_DEPS && \
-    pecl install pcov && \
-    docker-php-ext-enable pcov && \
+    pecl install pcov xdebug && \
+    docker-php-ext-enable pcov xdebug && \
     apk del .build-deps && \
     rm -rf /tmp/*
 
