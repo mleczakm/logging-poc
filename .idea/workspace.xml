@@ -4,51 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e13ac886-4ec9-4cbe-a39c-44da8586f7c3" name="Default Changelist" comment="Add base symfony internals and database support">
-      <change afterPath="$PROJECT_DIR$/config/packages/messenger.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20220621224355.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application/Command/AddDepartment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application/Command/AddDepartmentHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application/Query/Department.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application/Query/Departments.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Constant.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Department.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/DepartmentRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Percentage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Strategy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/ORM/Entity/Department.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/ORM/Entity/Mapping/Department.orm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/ORM/Entity/Mapping/User.orm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/ORM/Entity/VO/Constant.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/ORM/Entity/VO/Percentage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/ORM/Entity/VO/Strategy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/ORM/Query/DepartmentsQuery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/ORM/Repository/DepartmentRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/ORM/Type/Dollar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Symfony/Serializer/MoneyDenormalizer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/Symfony/Serializer/MoneyNormalizer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserInterface/Http/AddDepartment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserInterface/Http/GetDepartment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/AddDepartmentTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Functional/Infrastructure/ORM/Query/DepartmentsQueryTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Functional/Infrastructure/ORM/Repository/DepartmentRepositoryTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Infrastructure/ORM/Type/DollarTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/go/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/php/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/php/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/payout.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/payout.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="e13ac886-4ec9-4cbe-a39c-44da8586f7c3" name="Default Changelist" comment="Add department storing">
+      <change afterPath="$PROJECT_DIR$/src/UserInterface/Http/AddUserAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/AddUserTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/ORM/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/ORM/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Functional/HomepageTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/HomepageTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +186,7 @@
     "WebServerToolWindowFactoryState": "false",
     "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "Docker Compose",
     "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker Compose",
-    "last_opened_file_path": "/home/mleczkomi/projects/bitbag/sylius",
+    "last_opened_file_path": "/home/mleczkomi/projects/tidio/payout/tests/Feature",
     "php.override.implement.member.chooser.php.doc": "NONE",
     "settings.editor.selected.configurable": "preferences.sourceCode.PHP"
   },
@@ -238,11 +198,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/Feature" />
       <recent name="$PROJECT_DIR$/src/UserInterface/Http" />
       <recent name="$PROJECT_DIR$/swoole" />
       <recent name="$PROJECT_DIR$/.docker" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/.docker/filebeat" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tests/Feature" />
@@ -252,7 +212,11 @@
       <recent name="$PROJECT_DIR$/vanilla-php" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.DepartmentsQueryTest.returnNullOrExistingDepartment">
+  <component name="RunManager" selected="PHPUnit.AddUserTest.shouldAddUserOnPost">
+    <configuration name="AddUserTest.shouldAddUserOnPost" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Feature\AddUserTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/AddUserTest.php" method="shouldAddUserOnPost" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="DepartmentRepositoryTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Functional\Infrastructure\ORM\Repository\DepartmentRepositoryTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Functional/Infrastructure/ORM/Repository/DepartmentRepositoryTest.php" scope="Class" />
       <method v="2" />
@@ -269,21 +233,17 @@
       <TestRunner class="Unit\Infrastructure\ORM\Type\DollarTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Infrastructure/ORM/Type/DollarTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="DollarTest.usePlatformDecimalDeclaration" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Unit\Infrastructure\ORM\Type\DollarTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Infrastructure/ORM/Type/DollarTest.php" method="usePlatformDecimalDeclaration" scope="Method" />
-      <method v="2" />
-    </configuration>
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.AddUserTest.shouldAddUserOnPost" />
         <item itemvalue="PHPUnit.DepartmentsQueryTest.returnNullOrExistingDepartment" />
         <item itemvalue="PHPUnit.DepartmentsQueryTest" />
         <item itemvalue="PHPUnit.DepartmentRepositoryTest" />
         <item itemvalue="PHPUnit.DollarTest" />
-        <item itemvalue="PHPUnit.DollarTest.usePlatformDecimalDeclaration" />
       </list>
     </recent_temporary>
   </component>
@@ -330,7 +290,8 @@
     <MESSAGE value="Improve profiles naming" />
     <MESSAGE value="Add tests" />
     <MESSAGE value="Add base symfony internals and database support" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add base symfony internals and database support" />
+    <MESSAGE value="Add department storing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add department storing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -341,14 +302,9 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/vendor/symfony/serializer/Normalizer/AbstractObjectNormalizer.php</url>
-          <line>149</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/vendor/symfony/serializer/Normalizer/AbstractObjectNormalizer.php</url>
-          <line>141</line>
-          <option name="timeStamp" value="24" />
+          <url>file://$PROJECT_DIR$/src/UserInterface/Http/AddUserAction.php</url>
+          <line>31</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
