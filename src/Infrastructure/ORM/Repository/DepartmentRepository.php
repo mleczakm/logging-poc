@@ -17,6 +17,6 @@ final class DepartmentRepository extends ServiceEntityRepository implements \App
 
     public function add(Department $department)
     {
-        $this->_em->persist(\App\Infrastructure\ORM\Entity\Department::fromDomainObject($department));
+        $this->getEntityManager()->persist(\App\Infrastructure\ORM\Entity\Department::fromDomainObject($department));
     }
 }
