@@ -13,6 +13,7 @@ use Dunglas\DoctrineJsonOdm\Serializer;
 use Flow\ETL\Adapter\Doctrine\DbalQueryExtractor;
 use Flow\ETL\DSL\Entry;
 use Flow\ETL\DSL\Transform;
+use Flow\ETL\Exception\InvalidArgumentException;
 use Flow\ETL\Flow;
 use Flow\ETL\Formatter\AsciiTableFormatter;
 use Flow\ETL\Row;
@@ -24,14 +25,11 @@ final class Report implements \App\Application\Query\Report
         private readonly Connection $connection,
         private readonly Calculator $calculator,
         private readonly Serializer $serializer,
-    )
-    {
+    ) {
     }
 
-    public function monthly(string $orderBy)
+    public function monthly(string $orderBy, array $filterOut = []): string
     {
-
-
         $extractor = new DbalQueryExtractor(
             $this->connection,
             'SELECT person.*, department.name as department, department.strategy 
@@ -39,38 +37,51 @@ final class Report implements \App\Application\Query\Report
             LEFT JOIN department ON person.department_id = department.id'
         );
 
-        return (new Flow())
-            ->read($extractor)
-            ->rows(Transform::array_unpack('row'))
-            ->rows(Transform::string_concat(['name', 'surname'], ' ', 'name'))
-            ->sortBy(Sort::desc($orderBy))
-            ->transform(Transform::callback_row(
-                function (Row $row): Row {
-                    $payout = Money::of($row->get('payout')->value(), 'USD');
-
-                    $strategyVo = $this->serializer->deserialize($row->get('strategy')->value(), '', 'json');
-
-                    $bonus = $this->calculator->basedOnSeniority(
-                        $row->get('seniority')->value(),
-                        $payout,
-                        match (get_class($strategyVo)) {
-                            Constant::class => new \App\Domain\Constant($strategyVo->amount),
-                            Percentage::class => new \App\Domain\Percentage($strategyVo->percentage),
+        try {
+            return (new Flow())
+                ->read($extractor)
+                ->rows(Transform::array_unpack('row'))
+                ->filter(function(Row $row) use ($filterOut): bool {
+                    foreach ($filterOut as $key => $value) {
+                        if ($row->get($key)->value() === $value) {
+                            return true;
                         }
-                    );
+                    }
 
-                    return $row->add(Entry::string(
-                        'bonus',
-                        $bonus->formatTo('pl_PL')
-                    ))
-                        ->remove('payout')
-                        ->add(Entry::string('payout', $payout->formatTo('pl_PL')))
-                        ->add(Entry::string('full payout', $payout->plus($bonus)->formatTo('pl_PL')));
-                }
-            ))
-            ->sortBy(Sort::asc($orderBy))
-            ->drop('id', 'department_id', 'row', 'strategy', 'surname')
-            ->display(formatter: new AsciiTableFormatter())
-            ;
+                    return $filterOut === [];
+                })
+                ->rows(Transform::string_concat(['name', 'surname'], ' ', 'name'))
+                ->sortBy(Sort::desc($orderBy))
+                ->transform(Transform::callback_row(
+                    function (Row $row): Row {
+                        $payout = Money::of($row->get('payout')->value(), 'USD');
+
+                        $strategyVo = $this->serializer->deserialize($row->get('strategy')->value(), '', 'json');
+
+                        $bonus = $this->calculator->basedOnSeniority(
+                            $row->get('seniority')->value(),
+                            $payout,
+                            match (get_class($strategyVo)) {
+                                Constant::class => new \App\Domain\Constant($strategyVo->amount),
+                                Percentage::class => new \App\Domain\Percentage($strategyVo->percentage),
+                            }
+                        );
+
+                        return $row->add(Entry::string(
+                            'bonus',
+                            $bonus->formatTo('pl_PL')
+                        ))
+                            ->remove('payout')
+                            ->add(Entry::string('payout', $payout->formatTo('pl_PL')))
+                            ->add(Entry::string('full payout', $payout->plus($bonus)->formatTo('pl_PL')));
+                    }
+                ))
+                ->sortBy(Sort::asc($orderBy))
+                ->drop('id', 'department_id', 'row', 'strategy', 'surname')
+                ->display(formatter: new AsciiTableFormatter())
+                ;
+        } catch (InvalidArgumentException) {
+            return '';
+        }
     }
 }

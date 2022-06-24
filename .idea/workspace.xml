@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e13ac886-4ec9-4cbe-a39c-44da8586f7c3" name="Default Changelist" comment="Add base report action endpoint">
-      <change afterPath="$PROJECT_DIR$/src/Application/Query/Report.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/ETL/Report.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserInterface/Http/GetReportAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface/Http/GetReportAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/GetReportActionTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/GetReportActionTest.php" afterDir="false" />
+    <list default="true" id="e13ac886-4ec9-4cbe-a39c-44da8586f7c3" name="Default Changelist" comment="Extract report query">
+      <change beforePath="$PROJECT_DIR$/src/Application/Query/Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Query/Report.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrastructure/ETL/Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/ETL/Report.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,17 +217,17 @@
       <recent name="$PROJECT_DIR$/vanilla-php" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.GetReportActionTest.returnsValidMonthlyPayoutReport">
-    <configuration name="AddUserActionTest.shouldAddUserOnPost" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Feature\AddUserActionTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/AddUserActionTest.php" method="shouldAddUserOnPost" scope="Method" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="PHPUnit.GetReportActionTest">
     <configuration name="CalculatorTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="App\Tests\Unit\Domain\Bonus\CalculatorTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Domain/Bonus/CalculatorTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="CalculatorTest.shouldCalculateBonusAsExpected" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="App\Tests\Unit\Domain\Bonus\CalculatorTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Domain/Bonus/CalculatorTest.php" method="shouldCalculateBonusAsExpected" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GetReportActionTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Tests\Feature\GetReportActionTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/GetReportActionTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="GetReportActionTest.returnBadRequestOnNotSupportedColumn" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -248,11 +244,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.GetReportActionTest" />
         <item itemvalue="PHPUnit.GetReportActionTest.returnsValidMonthlyPayoutReport" />
         <item itemvalue="PHPUnit.GetReportActionTest.returnBadRequestOnNotSupportedColumn" />
         <item itemvalue="PHPUnit.CalculatorTest.shouldCalculateBonusAsExpected" />
         <item itemvalue="PHPUnit.CalculatorTest" />
-        <item itemvalue="PHPUnit.AddUserActionTest.shouldAddUserOnPost" />
       </list>
     </recent_temporary>
   </component>
@@ -307,7 +303,8 @@
     <MESSAGE value="Add seniority to user" />
     <MESSAGE value="Add bonus calculator" />
     <MESSAGE value="Add base report action endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add base report action endpoint" />
+    <MESSAGE value="Extract report query" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extract report query" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

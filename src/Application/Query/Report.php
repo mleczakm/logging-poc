@@ -6,5 +6,5 @@ namespace App\Application\Query;
 
 interface Report
 {
-    public function monthly(string $orderBy);
+    public function monthly(string $orderBy, array $filterOut = []): string;
 }
