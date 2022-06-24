@@ -115,6 +115,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
       <path value="$PROJECT_DIR$/vendor/symfony/messenger" />
       <path value="$PROJECT_DIR$/vendor/dama/doctrine-test-bundle" />
+      <path value="$PROJECT_DIR$/vendor/flow-php/etl" />
+      <path value="$PROJECT_DIR$/vendor/flow-php/array-dot" />
+      <path value="$PROJECT_DIR$/vendor/flow-php/etl-adapter-doctrine" />
+      <path value="$PROJECT_DIR$/vendor/flow-php/doctrine-dbal-bulk" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

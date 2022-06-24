@@ -117,6 +117,10 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/property-info" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/messenger" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dama/doctrine-test-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/flow-php/etl" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/flow-php/array-dot" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/flow-php/etl-adapter-doctrine" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/flow-php/doctrine-dbal-bulk" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

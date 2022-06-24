@@ -26,7 +26,6 @@ final class Department
             Percentage::class => new VO\Percentage($department->strategy->percentage),
         };
 
-
         return new self(
             $department->id,
             $department->name,

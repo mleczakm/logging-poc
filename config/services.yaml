@@ -40,8 +40,11 @@ services:
     dunglas_doctrine_json_odm.serializer:
         class: Dunglas\DoctrineJsonOdm\Serializer
         arguments:
-            - [ '@App\Infrastructure\Symfony\Serializer\MoneyDenormalizer', '@dunglas_doctrine_json_odm.normalizer.array', '@serializer.normalizer.datetime', '@dunglas_doctrine_json_odm.normalizer.object' ]
+            - [ '@App\Infrastructure\Symfony\Serializer\MoneyNormalizer', '@App\Infrastructure\Symfony\Serializer\MoneyDenormalizer', '@dunglas_doctrine_json_odm.normalizer.array', '@serializer.normalizer.datetime', '@dunglas_doctrine_json_odm.normalizer.object' ]
             - [ '@serializer.encoder.json' ]
         public: true
         autoconfigure: false
         autowire: false
+
+    Dunglas\DoctrineJsonOdm\Serializer:
+        alias: dunglas_doctrine_json_odm.serializer

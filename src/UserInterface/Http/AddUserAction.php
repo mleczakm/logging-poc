@@ -20,7 +20,7 @@ final class AddUserAction
         $data = $request->request;
 
         $stmt = $this->connection->prepare(<<<SQL
-                INSERT INTO customer (id, department_id, name, surname, payout, seniority)
+                INSERT INTO person (id, department_id, name, surname, payout, seniority)
                 VALUES (:id, :department_id, :name, :surname, :payout, :seniority)
             SQL
         );

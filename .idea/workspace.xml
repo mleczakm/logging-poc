@@ -4,13 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e13ac886-4ec9-4cbe-a39c-44da8586f7c3" name="Default Changelist" comment="Add seniority to user">
-      <change afterPath="$PROJECT_DIR$/src/Domain/Bonus/Calculator.php" afterDir="false" />
+    <list default="true" id="e13ac886-4ec9-4cbe-a39c-44da8586f7c3" name="Default Changelist" comment="Add bonus calculator">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20220624040731.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20220624041519.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/UserInterface/Http/GetReportAction.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tests/Feature/GetReportActionTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/Domain/Bonus/CalculatorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/report" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/payout.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/payout.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrastructure/ORM/Entity/Department.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/ORM/Entity/Department.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrastructure/ORM/Entity/Mapping/User.orm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/ORM/Entity/Mapping/User.orm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserInterface/Http/AddUserAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface/Http/AddUserAction.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,6 +183,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
       <path value="$PROJECT_DIR$/vendor/symfony/messenger" />
       <path value="$PROJECT_DIR$/vendor/dama/doctrine-test-bundle" />
+      <path value="$PROJECT_DIR$/vendor/flow-php/etl" />
+      <path value="$PROJECT_DIR$/vendor/flow-php/array-dot" />
+      <path value="$PROJECT_DIR$/vendor/flow-php/etl-adapter-doctrine" />
+      <path value="$PROJECT_DIR$/vendor/flow-php/doctrine-dbal-bulk" />
     </include_path>
   </component>
   <component name="ProjectId" id="1wqVdxRH2Ql9fkHhVoYJh5y9KSG" />
@@ -183,21 +197,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm&quot;: &quot;Docker Compose&quot;,
-    &quot;credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm&quot;: &quot;Docker Compose&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/mleczkomi/projects/tidio/payout/tests/Feature&quot;,
-    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.PHP&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "Docker Compose",
+    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker Compose",
+    "last_opened_file_path": "/home/mleczkomi/projects/tidio/payout/tests/Feature",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "settings.editor.selected.configurable": "preferences.sourceCode.PHP"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ],
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JSON"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/tests/Feature" />
@@ -214,17 +231,13 @@
       <recent name="$PROJECT_DIR$/vanilla-php" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.CalculatorTest.shouldCalculateBonusAsExpected">
+  <component name="RunManager" selected="PHPUnit.GetReportActionTest.returnsValidMonthlyPayoutReport">
     <configuration name="AddUserActionTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Feature\AddUserActionTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/AddUserActionTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="AddUserActionTest.shouldAddUserOnPost" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Feature\AddUserActionTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/AddUserActionTest.php" method="shouldAddUserOnPost" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="AddUserTest.shouldAddUserOnPost" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Feature\AddUserTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/AddUserActionTest.php" method="shouldAddUserOnPost" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="CalculatorTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -235,17 +248,21 @@
       <TestRunner class="App\Tests\Unit\Domain\Bonus\CalculatorTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Domain/Bonus/CalculatorTest.php" method="shouldCalculateBonusAsExpected" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="GetReportActionTest.returnsValidMonthlyPayoutReport" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Tests\Feature\GetReportActionTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/GetReportActionTest.php" method="returnsValidMonthlyPayoutReport" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.GetReportActionTest.returnsValidMonthlyPayoutReport" />
         <item itemvalue="PHPUnit.CalculatorTest.shouldCalculateBonusAsExpected" />
         <item itemvalue="PHPUnit.CalculatorTest" />
         <item itemvalue="PHPUnit.AddUserActionTest.shouldAddUserOnPost" />
         <item itemvalue="PHPUnit.AddUserActionTest" />
-        <item itemvalue="PHPUnit.AddUserTest.shouldAddUserOnPost" />
       </list>
     </recent_temporary>
   </component>
@@ -298,7 +315,8 @@
     <MESSAGE value="Update readme" />
     <MESSAGE value="Do not use deprecated property" />
     <MESSAGE value="Add seniority to user" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add seniority to user" />
+    <MESSAGE value="Add bonus calculator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add bonus calculator" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -307,11 +325,6 @@
           <url>file://$PROJECT_DIR$/swoole/src/Action/IndexAction.php</url>
           <line>26</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/UserInterface/Http/AddUserAction.php</url>
-          <line>33</line>
-          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

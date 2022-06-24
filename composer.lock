@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "59fa392901a8d93cb958cc8cd722c0a3",
+    "content-hash": "7881830d5d307c65b4582ba9f26c3249",
     "packages": [
         {
             "name": "brick/math",
@@ -1576,6 +1576,205 @@
                 }
             ],
             "time": "2022-01-21T08:51:14+00:00"
+        },
+        {
+            "name": "flow-php/array-dot",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flow-php/array-dot.git",
+                "reference": "c0688bb9e2c90f343779bc3b1761e11bd26da55f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flow-php/array-dot/zipball/c0688bb9e2c90f343779bc3b1761e11bd26da55f",
+                "reference": "c0688bb9e2c90f343779bc3b1761e11bd26da55f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~8.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Flow/ArrayDot/array_dot.php"
+                ],
+                "psr-4": {
+                    "Flow\\": [
+                        "src/Flow"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP ETL - Array Dot fuctions",
+            "keywords": [
+                "array",
+                "dot",
+                "etl",
+                "extract",
+                "filter",
+                "load",
+                "transform"
+            ],
+            "support": {
+                "issues": "https://github.com/flow-php/array-dot/issues",
+                "source": "https://github.com/flow-php/array-dot/tree/1.x"
+            },
+            "time": "2022-04-10T09:46:31+00:00"
+        },
+        {
+            "name": "flow-php/doctrine-dbal-bulk",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flow-php/doctrine-dbal-bulk.git",
+                "reference": "c4569c799d50a0f2e51f444f6b3ed984ed55fe83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flow-php/doctrine-dbal-bulk/zipball/c4569c799d50a0f2e51f444f6b3ed984ed55fe83",
+                "reference": "c4569c799d50a0f2e51f444f6b3ed984ed55fe83",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "^2.12 | ^3.1.4",
+                "php": "~8.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Flow\\Doctrine\\Bulk\\": [
+                        "src/Flow/Doctrine/Bulk"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Bulk inserts and updates for Doctrine DBAL",
+            "keywords": [
+                "bulk",
+                "dbal",
+                "doctrine",
+                "insert",
+                "upsert"
+            ],
+            "support": {
+                "issues": "https://github.com/flow-php/doctrine-dbal-bulk/issues",
+                "source": "https://github.com/flow-php/doctrine-dbal-bulk/tree/1.x"
+            },
+            "time": "2022-06-15T08:41:01+00:00"
+        },
+        {
+            "name": "flow-php/etl",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flow-php/etl.git",
+                "reference": "633daf078d0e1a3f6e22bc09bc978081d19b22e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flow-php/etl/zipball/633daf078d0e1a3f6e22bc09bc978081d19b22e0",
+                "reference": "633daf078d0e1a3f6e22bc09bc978081d19b22e0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "flow-php/array-dot": "^1.0@dev",
+                "php": "~8.1"
+            },
+            "require-dev": {
+                "jawira/case-converter": "^3.4",
+                "laminas/laminas-hydrator": "^4.0",
+                "laravel/serializable-closure": "^1.1",
+                "symfony/validator": "^5.3 || ^6.0"
+            },
+            "suggest": {
+                "jawira/case-converter": "Provides CaseConverter that is required by the EntryNameCaseConverterTransformer",
+                "laminas/laminas-hydrator": "Help converting ObjectEntry into ArrayEntry that can be later unpack into standalone Entries",
+                "ocramius/generated-hydrator": "Provieds generated hydrator that implemenets Laminas\\Hydrator\\HydratorInterface"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Flow\\": [
+                        "src/Flow"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP ETL - Extract Transform Load - Abstraction",
+            "keywords": [
+                "etl",
+                "extract",
+                "load",
+                "transform"
+            ],
+            "support": {
+                "issues": "https://github.com/flow-php/etl/issues",
+                "source": "https://github.com/flow-php/etl/tree/1.x"
+            },
+            "time": "2022-06-17T20:38:00+00:00"
+        },
+        {
+            "name": "flow-php/etl-adapter-doctrine",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flow-php/etl-adapter-doctrine.git",
+                "reference": "01abc2e472e0b8305febb82f7bec09ea902dea51"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flow-php/etl-adapter-doctrine/zipball/01abc2e472e0b8305febb82f7bec09ea902dea51",
+                "reference": "01abc2e472e0b8305febb82f7bec09ea902dea51",
+                "shasum": ""
+            },
+            "require": {
+                "flow-php/doctrine-dbal-bulk": "^1.0@dev",
+                "flow-php/etl": "^1.0@dev",
+                "php": "~8.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Flow\\ETL\\Adapter\\Doctrine\\": [
+                        "src/Flow/ETL/Adapter/Doctrine"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP ETL - Adapter - Doctrine Dbal",
+            "keywords": [
+                "bulk",
+                "dbal",
+                "doctrine",
+                "etl",
+                "insert",
+                "loader",
+                "upsert"
+            ],
+            "support": {
+                "issues": "https://github.com/flow-php/etl-adapter-doctrine/issues",
+                "source": "https://github.com/flow-php/etl-adapter-doctrine/tree/1.x"
+            },
+            "time": "2022-06-15T08:44:54+00:00"
         },
         {
             "name": "friendsofphp/proxy-manager-lts",
@@ -8548,8 +8747,11 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
+        "flow-php/doctrine-dbal-bulk": 20,
+        "flow-php/etl": 20,
+        "flow-php/etl-adapter-doctrine": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
