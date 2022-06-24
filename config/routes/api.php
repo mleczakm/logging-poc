@@ -5,6 +5,7 @@ declare(strict_types=1);
 use App\UserInterface\Http\AddDepartment;
 use App\UserInterface\Http\AddUserAction;
 use App\UserInterface\Http\GetDepartment;
+use App\UserInterface\Http\GetReportAction;
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
 return static function (RoutingConfigurator $routes) {
@@ -19,4 +20,8 @@ return static function (RoutingConfigurator $routes) {
     $routes->add('add_user', '/user')
         ->methods(['POST'])
         ->controller(AddUserAction::class);
+
+    $routes->add('get_report', '/report')
+        ->methods(['GET'])
+        ->controller(GetReportAction::class);
 };

@@ -38,4 +38,13 @@ final class GetReportActionTest extends WebTestCase
 
         self::assertStringEqualsFile(__DIR__ . '/report', $client->getResponse()->getContent());
     }
+
+    /** @test */
+    public function returnBadRequestOnNotSupportedColumn(): void
+    {
+        $client = self::createClient();
+        $client->request('GET', '/report?orderBy=xyz',);
+
+        self::assertResponseStatusCodeSame(400);
+    }
 }
