@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Uid\Ulid;
 
-final class AddUserTest extends WebTestCase
+final class AddUserActionTest extends WebTestCase
 {
     /** @test */
     public function shouldAddUserOnPost(): void
@@ -31,7 +31,8 @@ final class AddUserTest extends WebTestCase
                              'department_id' => $departmentId,
                              'name' => 'Michał',
                              'surname' => 'Mleczko',
-                             'payout' => '112.12',
+                             'payout' => 123,
+                             'seniority' => 15
                          ]);
 
         self::assertSame(Response::HTTP_NO_CONTENT, $client->getResponse()->getStatusCode());

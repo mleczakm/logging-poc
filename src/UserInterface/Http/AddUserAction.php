@@ -20,15 +20,16 @@ final class AddUserAction
         $data = $request->request;
 
         $stmt = $this->connection->prepare(<<<SQL
-                INSERT INTO customer (id, department_id, name, surname, payout)
-                VALUES (:id, :department_id, :name, :surname, :payout)
+                INSERT INTO customer (id, department_id, name, surname, payout, seniority)
+                VALUES (:id, :department_id, :name, :surname, :payout, :seniority)
             SQL
         );
         $stmt->bindValue(':id', $data->get('id'), 'ulid');
         $stmt->bindValue(':department_id', $data->get('department_id'), 'ulid');
         $stmt->bindValue(':name', $data->get('name'));
         $stmt->bindValue(':surname', $data->get('surname'));
-        $stmt->bindValue(':payout', $data->get('payout'));
+        $stmt->bindValue(':payout', $data->get('payout'), 'decimal');
+        $stmt->bindValue(':seniority', $data->get('payout'));
 
         $stmt->execute();
 

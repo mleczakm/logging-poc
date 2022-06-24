@@ -14,6 +14,7 @@ final class User
         public readonly Ulid $id,
         public readonly string $name,
         public readonly string $surname,
+        public readonly int $seniority,
         public readonly Money $payout,
         public readonly Department $department,
     ) {
