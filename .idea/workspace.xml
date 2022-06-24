@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e13ac886-4ec9-4cbe-a39c-44da8586f7c3" name="Default Changelist" comment="Do not use deprecated property">
+    <list default="true" id="e13ac886-4ec9-4cbe-a39c-44da8586f7c3" name="Default Changelist" comment="Add seniority to user">
+      <change afterPath="$PROJECT_DIR$/src/Domain/Bonus/Calculator.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/UserInterface/Http/GetReportAction.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tests/Feature/GetReportActionTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Unit/Domain/Bonus/CalculatorTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/ORM/Entity/Mapping/User.orm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/ORM/Entity/Mapping/User.orm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/ORM/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/ORM/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserInterface/Http/AddUserAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface/Http/AddUserAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/AddUserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/AddUserActionTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +214,7 @@
       <recent name="$PROJECT_DIR$/vanilla-php" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.AddUserActionTest.shouldAddUserOnPost">
+  <component name="RunManager" selected="PHPUnit.CalculatorTest.shouldCalculateBonusAsExpected">
     <configuration name="AddUserActionTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Feature\AddUserActionTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/AddUserActionTest.php" scope="Class" />
       <method v="2" />
@@ -229,12 +227,12 @@
       <TestRunner class="Feature\AddUserTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Feature/AddUserActionTest.php" method="shouldAddUserOnPost" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="DepartmentsQueryTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Functional\Infrastructure\ORM\Query\DepartmentsQueryTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Functional/Infrastructure/ORM/Query/DepartmentsQueryTest.php" scope="Class" />
+    <configuration name="CalculatorTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Tests\Unit\Domain\Bonus\CalculatorTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Domain/Bonus/CalculatorTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="DepartmentsQueryTest.returnNullOrExistingDepartment" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Functional\Infrastructure\ORM\Query\DepartmentsQueryTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Functional/Infrastructure/ORM/Query/DepartmentsQueryTest.php" method="returnNullOrExistingDepartment" scope="Method" />
+    <configuration name="CalculatorTest.shouldCalculateBonusAsExpected" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Tests\Unit\Domain\Bonus\CalculatorTest" configuration_file="/var/www/html/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Unit/Domain/Bonus/CalculatorTest.php" method="shouldCalculateBonusAsExpected" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -243,11 +241,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.CalculatorTest.shouldCalculateBonusAsExpected" />
+        <item itemvalue="PHPUnit.CalculatorTest" />
         <item itemvalue="PHPUnit.AddUserActionTest.shouldAddUserOnPost" />
         <item itemvalue="PHPUnit.AddUserActionTest" />
         <item itemvalue="PHPUnit.AddUserTest.shouldAddUserOnPost" />
-        <item itemvalue="PHPUnit.DepartmentsQueryTest.returnNullOrExistingDepartment" />
-        <item itemvalue="PHPUnit.DepartmentsQueryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -299,7 +297,8 @@
     <MESSAGE value="Add dama bundle config" />
     <MESSAGE value="Update readme" />
     <MESSAGE value="Do not use deprecated property" />
-    <option name="LAST_COMMIT_MESSAGE" value="Do not use deprecated property" />
+    <MESSAGE value="Add seniority to user" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add seniority to user" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
