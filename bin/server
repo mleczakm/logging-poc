@@ -4,6 +4,7 @@
 declare(strict_types=1);
 
 use App\Action\IndexAction;
+use App\Interval\TickTocker;
 use App\Message\NullTask;
 use App\MessageHandler\NullTaskHandler;
 use App\Server\Factory;
@@ -24,5 +25,7 @@ $handler = new Handler($logger, new Map([NullTask::class => [new NullTaskHandler
 $server->on('WorkerStart', [$handler, 'start']);
 $server->on('Task', [$handler, 'handle']);
 $server->on('Finish', [$handler, 'finish']);
+
+$server->on('Start', fn() => $server->tick(1000, new TickTocker($logger)));
 
 $server->start();

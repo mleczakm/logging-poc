@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e13ac886-4ec9-4cbe-a39c-44da8586f7c3" name="Default Changelist" comment="Update poc">
-      <change afterPath="$PROJECT_DIR$/src/Log/StdOutLogger.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/logging-poc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/logging-poc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="e13ac886-4ec9-4cbe-a39c-44da8586f7c3" name="Default Changelist" comment="Run traefik on 80 port">
+      <change afterPath="$PROJECT_DIR$/src/Interval/TickTocker.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/server" beforeDir="false" afterPath="$PROJECT_DIR$/bin/server" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Action/IndexAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Action/IndexAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Log/Factory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Log/Factory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/Factory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Factory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Task/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +160,7 @@
       <workItem from="1629186198166" duration="5740000" />
       <workItem from="1629196598696" duration="8429000" />
       <workItem from="1629377454144" duration="6143000" />
-      <workItem from="1662370011908" duration="6878000" />
+      <workItem from="1662370011908" duration="8404000" />
     </task>
     <task id="LOCAL-00001" summary="Fix building process">
       <created>1629378602384</created>
@@ -187,7 +176,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662371773579</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Remove not required dependencies">
+      <created>1662378265354</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1662378265354</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Run traefik on 80 port">
+      <created>1662378320960</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1662378320960</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +210,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix building process" />
     <MESSAGE value="Update poc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update poc" />
+    <MESSAGE value="Remove not required dependencies" />
+    <MESSAGE value="Run traefik on 80 port" />
+    <option name="LAST_COMMIT_MESSAGE" value="Run traefik on 80 port" />
   </component>
 </project>
