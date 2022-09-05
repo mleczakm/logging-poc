@@ -10,6 +10,8 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.php.rule=Host(`poc.localhost`)"
       - "traefik.http.routers.php.entrypoints=web"
+    env_file:
+      - .env
     volumes:
       - ~/.composer:/var/www/.composer
       - .:/var/www/html

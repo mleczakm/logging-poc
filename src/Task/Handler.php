@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace App\Task;
 
 use Ds\Map;
-use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 use Swoole\Http\Server;
 use Swoole\Server\Task;
 
 class Handler
 {
-    private Logger $logger;
+    private LoggerInterface $logger;
     /**
      * @var Map<string, callable>
      */
@@ -22,7 +22,7 @@ class Handler
      *
      * @param Map<string, callable> $handlers
      */
-    public function __construct(Logger $logger, Map $handlers)
+    public function __construct(LoggerInterface $logger, Map $handlers)
     {
         $this->logger = $logger;
         $this->handlers = $handlers;
@@ -71,8 +71,6 @@ class Handler
                 ]);
 
             return false;
-        } finally {
-            $this->logger->reset();
         }
     }
 

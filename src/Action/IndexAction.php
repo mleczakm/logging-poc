@@ -38,8 +38,6 @@ class IndexAction
             return;
         } catch (\Throwable $throwable) {
             $this->logger->error('Handling request failed', ['exception' => $throwable]);
-        } finally {
-            $this->logger->reset();
         }
     }
 }

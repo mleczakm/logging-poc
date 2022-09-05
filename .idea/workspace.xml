@@ -4,22 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e13ac886-4ec9-4cbe-a39c-44da8586f7c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/php/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/.docker/php/Dockerfile" afterDir="false" />
+    <list default="true" id="e13ac886-4ec9-4cbe-a39c-44da8586f7c3" name="Default Changelist" comment="Update poc">
+      <change afterPath="$PROJECT_DIR$/src/Log/StdOutLogger.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/logging-poc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/logging-poc.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/server" beforeDir="false" afterPath="$PROJECT_DIR$/bin/server" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bootstrap.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Action/IndexAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Action/IndexAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Log/Factory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Log/Factory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Message/NullTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Message/NullTask.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MessageHandler/NullTaskHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/MessageHandler/NullTaskHandler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server/Factory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Factory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Task/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,57 +56,14 @@
     <setting file="file://$PROJECT_DIR$/src/Message/NullTask.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/MessageHandler/NullTaskHandler.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Task/Handler.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/symfony.lock" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/tests/Load/basic-request.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/tests/Load/basic.yaml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
-      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/vendor/nyholm/psr7" />
-      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
-      <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
       <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
-      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
-      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
-      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
-      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/symfony/config" />
-      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
-      <path value="$PROJECT_DIR$/vendor/symfony/runtime" />
-      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
-      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/symfony/string" />
-      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
-      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
-      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
-      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
-      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
       <path value="$PROJECT_DIR$/vendor/runtime/swoole" />
-      <path value="$PROJECT_DIR$/vendor/psr/cache" />
-      <path value="$PROJECT_DIR$/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
-      <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
@@ -142,12 +98,6 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
-      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
-      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
-      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
-      <path value="$PROJECT_DIR$/vendor/symfony/proxy-manager-bridge" />
-      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
       <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
       <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
@@ -165,21 +115,16 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
       <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" />
-      <path value="$PROJECT_DIR$/vendor/symfony/uid" />
       <path value="$PROJECT_DIR$/vendor/brick/money" />
       <path value="$PROJECT_DIR$/vendor/brick/math" />
       <path value="$PROJECT_DIR$/vendor/dunglas/doctrine-json-odm" />
-      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
-      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
-      <path value="$PROJECT_DIR$/vendor/symfony/messenger" />
       <path value="$PROJECT_DIR$/vendor/dama/doctrine-test-bundle" />
       <path value="$PROJECT_DIR$/vendor/flow-php/etl" />
       <path value="$PROJECT_DIR$/vendor/flow-php/array-dot" />
       <path value="$PROJECT_DIR$/vendor/flow-php/etl-adapter-doctrine" />
       <path value="$PROJECT_DIR$/vendor/flow-php/doctrine-dbal-bulk" />
       <path value="$PROJECT_DIR$/vendor/openswoole/ide-helper" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
     </include_path>
   </component>
   <component name="ProjectId" id="1wqVdxRH2Ql9fkHhVoYJh5y9KSG" />
@@ -195,7 +140,13 @@
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "php.override.implement.member.chooser.php.doc": "NONE"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "TEXT"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -220,7 +171,7 @@
       <workItem from="1629186198166" duration="5740000" />
       <workItem from="1629196598696" duration="8429000" />
       <workItem from="1629377454144" duration="6143000" />
-      <workItem from="1662370011908" duration="1724000" />
+      <workItem from="1662370011908" duration="6878000" />
     </task>
     <task id="LOCAL-00001" summary="Fix building process">
       <created>1629378602384</created>
@@ -229,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629378602384</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update poc">
+      <created>1662371773579</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662371773579</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +206,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix building process" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix building process" />
+    <MESSAGE value="Update poc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update poc" />
   </component>
 </project>
