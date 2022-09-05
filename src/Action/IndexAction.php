@@ -5,22 +5,18 @@ declare(strict_types=1);
 namespace App\Action;
 
 use App\Message\NullTask;
-use App\Metrics\TimeSpan;
-use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 use Swoole\Http\Request;
 use Swoole\Http\Response;
 use Swoole\Http\Server;
 
-/**
- * @author Michał Mleczko <michal.mleczko@iiit.pl>
- */
 class IndexAction
 {
     private Server $server;
 
-    private Logger $logger;
+    private LoggerInterface $logger;
 
-    public function __construct(Server $server, Logger $logger
+    public function __construct(Server $server, LoggerInterface $logger
     ) {
         $this->server = $server;
         $this->logger = $logger;
@@ -38,7 +34,7 @@ class IndexAction
             if (empty($requestTime = (float) $request->server['request_time_float'])) {
                 throw new \LogicException('Request time is no longer available!');
             }
-            $response->end($requestTime);
+            $response->end((string) $requestTime);
             return;
         } catch (\Throwable $throwable) {
             $this->logger->error('Handling request failed', ['exception' => $throwable]);

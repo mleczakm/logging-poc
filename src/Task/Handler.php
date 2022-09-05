@@ -4,20 +4,13 @@ declare(strict_types=1);
 
 namespace App\Task;
 
-use App\Metrics\Registry;
-use App\Metrics\TimeSpan;
 use Ds\Map;
 use Monolog\Logger;
 use Swoole\Http\Server;
 use Swoole\Server\Task;
-use Symfony\Component\Stopwatch\Stopwatch;
 
-/**
- * @author Michał Mleczko <michal.mleczko@iiit.pl>
- */
 class Handler
 {
-    private Registry $registry;
     private Logger $logger;
     /**
      * @var Map<string, callable>

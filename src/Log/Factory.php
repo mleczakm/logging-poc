@@ -6,13 +6,11 @@ namespace App\Log;
 
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use Psr\Log\LoggerInterface;
 
-/**
- * @author Michał Mleczko <michal.mleczko@iiit.pl>
- */
 class Factory
 {
-    public static function create(bool $debug = false): Logger
+    public static function create(bool $debug = false): LoggerInterface
     {
         return (new Logger('poc'))
             ->pushHandler(

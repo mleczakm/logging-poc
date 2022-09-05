@@ -7,9 +7,6 @@ namespace App\MessageHandler;
 use App\Message\NullTask;
 use Psr\Log\LoggerInterface;
 
-/**
- * @author Michał Mleczko <michal.mleczko@iiit.pl>
- */
 class NullTaskHandler
 {
     private LoggerInterface $logger;

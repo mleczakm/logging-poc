@@ -10,8 +10,8 @@ RUN apk add --update icu && \
     apk add --no-cache --virtual .build-deps $PHPIZE_DEPS icu-dev curl && \
     docker-php-ext-configure intl && \
     docker-php-ext-install opcache intl && \
-    pecl install ds inotify swoole && \
-    docker-php-ext-enable ds inotify swoole && \
+    pecl install ds inotify openswoole && \
+    docker-php-ext-enable ds inotify openswoole && \
     cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini && \
     apk del .build-deps && \
     rm -Rf /tmp/*

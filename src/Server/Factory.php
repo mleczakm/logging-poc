@@ -6,9 +6,6 @@ namespace App\Server;
 
 use Swoole\Http\Server;
 
-/**
- * @author Michał Mleczko <michal.mleczko@iiit.pl>
- */
 class Factory
 {
     public static function create(): Server
